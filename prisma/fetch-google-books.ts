@@ -600,3 +600,12 @@ main().catch(error => {
   console.error('Fatal error:', error);
   process.exit(1);
 });
+// Mock prisma
+jest.mock('@/lib/prisma', () => ({
+  prisma: {
+    user: {
+      findUnique: jest.fn(),
+      create: jest.fn(),
+    },
+  },
+}));

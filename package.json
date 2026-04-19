@@ -18,7 +18,9 @@
     "mock:gorse-feedback": "node node_modules/ts-node/dist/bin.js --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" scripts/mock-gorse-feedback-smart.ts",
     "worker": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" scripts/workers.ts",
     "cron": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" scripts/cron.ts",
-    "sync:qdrant": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" scripts/sync-book-qdrant.ts"
+    "sync:qdrant": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" scripts/sync-book-qdrant.ts",
+    "test": "jest",
+  "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@chakra-ui/charts": "^3.29.0",
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/node-cron": "^3.0.11",
     "@types/nodemailer": "^7.0.3",
@@ -73,10 +76,12 @@
     "eslint-config-next": "15.5.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "jest": "^30.3.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "prisma": "^6.17.1",
     "tailwindcss": "^3.4.0",
+    "ts-jest": "^29.4.9",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5"
